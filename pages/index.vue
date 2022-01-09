@@ -1,7 +1,7 @@
 <template>
   <v-row class="text-center" justify="center" align="center">
     <v-col cols="12">
-      トップページ-Vercel3
+      トップページ-Vercel3main
       <font-awesome-icon icon="download"/>
       <font-awesome-icon icon="anchor"/>
       <font-awesome-icon icon="star"/>

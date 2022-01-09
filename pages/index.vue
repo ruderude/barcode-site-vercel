@@ -1,7 +1,7 @@
 <template>
   <v-row class="text-center" justify="center" align="center">
     <v-col cols="12">
-      トップページ-site
+      トップページ-Vercel3
       <font-awesome-icon icon="download"/>
       <font-awesome-icon icon="anchor"/>
       <font-awesome-icon icon="star"/>
@@ -29,6 +29,9 @@
           :src="work.fields.image.fields.file.url"
         ></v-img>
       </div>
+    </v-col>
+    <v-col id="target" class="mt-16">
+      <nuxt-link v-scroll-to="'#top'" to class="mr-2">トップへ</nuxt-link>
     </v-col>
   </v-row>
 </template>

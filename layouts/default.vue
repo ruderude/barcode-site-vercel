@@ -2,6 +2,7 @@
   <v-app>
 
     <v-app-bar
+      id="top"
       color="green accent-4" dark
       fixed
       app
@@ -11,9 +12,20 @@
         Top
       </nuxt-link>
 
-      <nuxt-link to="/other" >
+      <nuxt-link to="/other" class="mr-2">
         Other
       </nuxt-link>
+
+      <nuxt-link v-scroll-to="'#target'" to class="mr-2">targetの位置へ</nuxt-link>
+
+      <v-btn
+        color="error"
+        @click="onScroll"
+      >
+        target-method
+      </v-btn>
+
+
 
     </v-app-bar>
 
@@ -39,6 +51,17 @@ export default {
   name: 'default',
   data () {
     return {
+    }
+  },
+  methods: {
+    onScroll() {
+      this.$scrollTo('#target')
+    }
+  },
+  mounted () {
+    const hash = this.$route.hash
+    if (hash && hash.match(/^#.+$/)) {
+      this.$scrollTo(hash)
     }
   }
 }
